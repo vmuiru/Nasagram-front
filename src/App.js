@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+import { Apod } from './components/Apod';
+import { getApod } from './services/Apod-api';
+
+import { useState, useEffect } from 'react';
+//import { BrowserRouter, Route } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
+
+  const [apodData, setApodData] = useState({
+    Results: []
+  })
+
+  async function getApodData() {
+    const data = await getApod();
+    setApodData(data);
+
+  }
+
+  useEffect(() => {
+    getApodData();
+    console.log('effect')
+  }, []);
+
   return (
-    <div className="App">
+<div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Nasagram</h1>  
       </header>
+      <div>
+          return(
+            <Apod />
+          )
+
+
+
+
+
+      </div>
     </div>
   );
 }
