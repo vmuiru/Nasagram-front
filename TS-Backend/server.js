@@ -6,17 +6,13 @@ const app = express();
 
 
 require('dotenv').config();
-
-
-
-
 require('./config/database');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cors());
 
-
+app.use('/api/users', require('./routes/api/users'));
 
 
 const port = process.env.PORT || 3001;
