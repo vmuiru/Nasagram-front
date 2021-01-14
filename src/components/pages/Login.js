@@ -22,7 +22,7 @@ function Login(props) {
             setFormState(getInitialFormState());
             // TODO: comment out to see that user doesn't get added to state without
             props.handleSignupOrLogin();
-            props.history.push('/dashboard');
+            props.history.push('/');
         } catch (error) {
             alert(error.message);
         }

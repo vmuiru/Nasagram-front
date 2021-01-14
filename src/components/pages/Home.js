@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 
 function Home(props) {
@@ -16,6 +17,9 @@ function Home(props) {
                 </li>
                 <li>
                 <Link to='/pod'>Picture of the Day</Link>
+                </li>
+                <li>
+                <Link to='/album'>Albums</Link>
                 </li>
                 </>
                 :
