@@ -1,5 +1,6 @@
 import  Apod  from './components/Apod';
 import { ThemeProvider } from 'styled-components';
+import styled  from 'styled-components';
 import { GlobalStyles } from './components/GlobalStyles';
 import { lightTheme, darkTheme } from './components/Themes';
 import AlbumView from './components/pages/AlbumView';
@@ -11,11 +12,18 @@ import Signup from './components/pages/Signup';
 import { getUser, logout } from './services/UserService';
 import { getApod, getAlbums } from './services/Apod-api';
 import { Switch, Route } from 'react-router-dom';
+import './App.css';
 
 import { useState, useEffect, Redirect } from 'react';
 //import { BrowserRouter, Route } from 'react-router-dom';
 
-import './App.css';
+const StyledAlbumView = styled.div`
+  display: flex;
+  width: 50vh;
+  height: 40vh;
+
+`;
+
 
 function App(props) {
 
@@ -85,13 +93,13 @@ function App(props) {
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <>
       <GlobalStyles/>
-<div className="App">
+<main className="App">
 <button onClick={themeToggler}>Switch Theme</button>
 <Home handleLogout={handleLogout} user={userState.user} />
       
       <section>
         <Switch>
-            <Route exact path="/pod" render={props => 
+            <Route exact path="/" render={props => 
             userState.user ?
               <Apod apodData={apodData.results} />
 
@@ -104,13 +112,15 @@ function App(props) {
             <Route exact path="/login" render={props => 
               <Login {...props} handleSignupOrLogin={handleSignupOrLogin}/>
             } />
+            <StyledAlbumView>
             <Route exact path="/album" render={props => 
               <AlbumView {...props} albumData={albumData.results}/>
             } />
+            </StyledAlbumView>
 
         </Switch>
       </section>
-    </div>
+    </main>
     </>
     </ThemeProvider>
   );

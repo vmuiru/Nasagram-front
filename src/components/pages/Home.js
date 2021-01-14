@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 
 function Home(props) {
     return (
-        <main>
+        <header>
         <Link to='/'>
         <h1>N A S A G R A M</h1>
         </Link>
-        <nav>
             <ul>
                 {
                     props.user ?
@@ -34,8 +33,7 @@ function Home(props) {
 }
 
             </ul>
-            </nav>
-            </main>
+            </header>
             );
     };
 
