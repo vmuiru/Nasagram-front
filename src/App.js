@@ -11,11 +11,11 @@ import Signup from './components/pages/Signup';
 
 import { getUser, logout } from './services/UserService';
 import { getApod, getAlbums } from './services/Apod-api';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 
-import { useState, useEffect, Redirect } from 'react';
-//import { BrowserRouter, Route } from 'react-router-dom';
+
+import { useState, useEffect } from 'react';
 
 const StyledAlbumView = styled.div`
   display: flex;
