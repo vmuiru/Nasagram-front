@@ -41,7 +41,7 @@ function getInitialFormState() {
         }
     }
     return (
-        <div className="Page">
+        <div className="Page" id='signup'>
             <form onSubmit={handleSubmit}>
                 <input 
                 value={formState.firstName} 

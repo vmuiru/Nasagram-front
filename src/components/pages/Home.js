@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+
 function Home(props) {
     return (
         <header>
@@ -14,7 +15,7 @@ function Home(props) {
                 <Link to='' onClick={props.handleLogout}>Logout</Link>
                 </li>
                 <li>
-                <Link to='/pod'>Picture of the Day</Link>
+                <Link to='/'>Picture of the Day</Link>
                 </li>
                 <li>
                 <Link to='/album'>Albums</Link>

@@ -1,11 +1,14 @@
 .App {
   min-height: 100vh;
+  font-family: 'Bodoni Moda', serif;
 }
 header {
-  padding: 0 25px;
+  padding: 0 35px;
+  width: 95vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 1px 1px 1px 3px lightyellow; 
 }
 header > ul {
   display: flex;
@@ -14,14 +17,39 @@ header > ul {
 
 header > ul > li {
   font-size: 25px;
-  margin-right: 20px;
+  padding-right: 20px;
+  
 }
 Header a {
   text-decoration: none;
   color: gold;
 }
 
-main {
-  width: 100vh;
+.detail {
+  display: contents;
+  
 }
+
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20%;
+  background-color: gold;
+  padding-left: 400px;
+  width: 200px;
+  height: 120px;
+}
+
+#signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20%;
+  background-color: gold;
+  padding-left: 400px;
+  width: 200px;
+  height: 150px;
+}
+
 

@@ -1,8 +1,7 @@
 import  Apod  from './components/Apod';
 import { ThemeProvider } from 'styled-components';
-import styled  from 'styled-components';
 import { GlobalStyles } from './components/GlobalStyles';
-import { lightTheme, darkTheme } from './components/Themes';
+import { darkTheme } from './components/Themes';
 import AlbumView from './components/pages/AlbumView';
 import Home from './components/pages/Home';
 import Login from './components/pages/Login';
@@ -17,17 +16,9 @@ import './App.css';
 
 import { useState, useEffect } from 'react';
 
-const StyledAlbumView = styled.div`
-  display: flex;
-  width: 50vh;
-  height: 40vh;
-
-`;
-
-
 function App(props) {
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light')
 }
@@ -82,6 +73,7 @@ function App(props) {
 
 
 
+
   function handleLogout() {
     logout();
 
@@ -90,11 +82,10 @@ function App(props) {
   }
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={darkTheme}>
       <>
       <GlobalStyles/>
 <main className="App">
-<button onClick={themeToggler}>Switch Theme</button>
 <Home handleLogout={handleLogout} user={userState.user} />
       
       <section>
@@ -112,12 +103,10 @@ function App(props) {
             <Route exact path="/login" render={props => 
               <Login {...props} handleSignupOrLogin={handleSignupOrLogin}/>
             } />
-            <StyledAlbumView>
+        
             <Route exact path="/album" render={props => 
               <AlbumView {...props} albumData={albumData.results}/>
             } />
-            </StyledAlbumView>
-
         </Switch>
       </section>
     </main>

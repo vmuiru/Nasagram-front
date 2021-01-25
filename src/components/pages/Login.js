@@ -28,7 +28,7 @@ function Login(props) {
         }
     }
     return (
-        <div className="Page">
+        <div className="Page" id='login'>
             <form onSubmit={handleSubmit}>
                 <input 
                 value={formState.email} 
