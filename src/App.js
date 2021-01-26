@@ -17,12 +17,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 
 function App(props) {
-
-  const [theme, setTheme] = useState('dark');
-  const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-}
-
+  
   const [ userState, setUserState ] = useState({
     user: getUser()
   });

@@ -1,4 +1,3 @@
-import { getApod } from '../services/Apod-api';
 import styled from 'styled-components';
 
 const Styledpage = styled.div `
@@ -34,7 +33,9 @@ const Apod = (props) => {
         src={props.apodData.url}
         alt={props.apodData.title}  
             /> 
-            <p>{props.apodData.explanation}</p>
+            <p 
+            className='animate__animated animate__rotateInUpRight animate__delay-3s'>
+                {props.apodData.explanation}</p>
     
         </div>
         </Styledpage>

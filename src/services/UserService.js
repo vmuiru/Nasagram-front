@@ -1,6 +1,6 @@
 import { setToken, getUserFromToken, removeToken } from './TokenService';
 
-const BASE_URL = 'http://localhost:3001/api/users';
+const BASE_URL = 'https://nasagram-back.herokuapp.com/api/users';
 
 
 function signup(user) {

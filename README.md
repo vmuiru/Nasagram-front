@@ -19,13 +19,14 @@
  ## Getting Started - Important Instructions
   https://seir-christmas-gifts.herokuapp.com/
 
- Login with a google account
+ Login and Sign-up with a google account
  Otherwise create one https://support.google.com/mail/answer/56256?hl=en
 
-![NASAGRAM Homepage](https://user-images.githubusercontent.com/54866016/100807472-625f7700-3400-11eb-9a0a-a2bf8477c8bd.jpg)
+## NASAGRAM Homepage
 
 
-![NASAGRAM  wframes](https://user-images.githubusercontent.com/54866016/100807573-90dd5200-3400-11eb-915a-454be7ada765.jpg)
+
+## NASAGRAM Feed
 
  ## Next Steps: Planned future enhancements
  - Enable Search Feature

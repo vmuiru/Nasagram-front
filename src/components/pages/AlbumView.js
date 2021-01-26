@@ -22,7 +22,7 @@ img {
     const albums = props.albumData.filter(album => album.media_type === 'image')
     function showExplanation(album) {
       return(
-        <div className='detail' style={'display: contents'}>
+        <div>
           {album.date && album.explanation}
       </div>
       )
@@ -33,13 +33,11 @@ img {
            {
             albums.map(album => (
                <img
-               onMouseOver={() => showExplanation(album)}
+               id='img' onMouseOver={() => showExplanation(album)}
                key={album.url} 
                src={album.url} 
                alt={album.title}
-                /> 
-            
-              
+                />
             ))
            }
 
